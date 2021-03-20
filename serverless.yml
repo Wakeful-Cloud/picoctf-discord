@@ -1,0 +1,22 @@
+service: picoctf-discord
+
+frameworkVersion: "2"
+
+provider:
+  name: knative
+  # optional Docker Hub credentials you need if you're using local Dockerfiles as function handlers
+  docker:
+    username: ${env:DOCKER_HUB_USERNAME}
+    password: ${env:DOCKER_HUB_PASSWORD}
+
+functions:
+  summarizeScoreboards:
+    handler: Dockerfile
+    context: ./src
+    events:
+      # Run once per day at 4:00 PM
+      - cron:
+        schedule: "0 16 * * *"
+
+plugins:
+  - serverless-knative

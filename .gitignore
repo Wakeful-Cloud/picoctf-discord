@@ -1,3 +1,6 @@
+# Serverless directories
+.serverless
+
 # Logs
 logs
 *.log

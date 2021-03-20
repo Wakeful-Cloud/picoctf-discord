@@ -1,0 +1,22 @@
+{
+  "name": "picoctf-discord",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/luxon": "^1.26.2",
+    "serverless-knative": "^0.2.3"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "axios-cookiejar-support": "^1.0.1",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "luxon": "^1.26.0",
+    "tough-cookie": "^2.5.0",
+    "ts-node": "^9.1.1"
+  }
+}
